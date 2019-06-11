@@ -155,3 +155,12 @@ Install latest VBox Guest Additions
 ### A Vagrant environment or target machine is required to run this command
 
 Run `vagrant init` to create a new Vagrant environment. Or, get an ID of a target machine from `vagrant global-status` to run this command on. A final option is to change to a directory with a Vagrantfile and to try again." - please ensure you are on the correct working directory (where this ReadMe and `Vagrantfile` is) of this repo and try again.
+
+###  Correction points from Fork source
+
+The following is described along with Apache 2.0 LICENSE.
+
+An error occurred in the call of 'shell / Register-LoginTask.ps1', so some code of 'shell / InstallTools.ps1' was corrected.
+Please see the [commit log](https://github.com/Takmg/au-chocolatey-test-environment/commit/80c5af13186d50587e49de928fa93962b5775279) for details.
+
+
