@@ -66,6 +66,12 @@ if (!(Test-Path $ChocoInstallPath)) {
   if ($installLocalFile) {
     Install-LocalChocolateyPackage $localChocolateyPackageFilePath
   } else {
+    # Append Lines
+    #[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+    ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | 
+                                           SecurityProtocolType.Tls11 | 
+                                           SecurityProtocolType.Tls12 | 
+                                           SecurityProtocolType.Ssl3;
     if ($installLatestBeta) {
       iex ((new-object net.webclient).DownloadString('https://chocolatey.org/installabsolutelatest.ps1'))
     } else {
